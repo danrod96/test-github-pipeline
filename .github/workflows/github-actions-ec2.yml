@@ -23,13 +23,13 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
       
-        - name: multiple command
-          uses: appleboy/ssh-action@v0.1.6
-          with:
-            host: ${{ secrets.HOST_DNS }}
-            username: ${{ secrets.USERNAME }}
-            key: ${{ secrets.EC2-SSH_KEY }}
-            port: ${{ secrets.PORT }}
-            script: |
-              whoami
-              ls -al
+      - name: Build Drupal App
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2-SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            whoami
+            ls -al
