@@ -26,3 +26,4 @@ jobs:
       - name: Build Drupal App
         run: |
           cd ${{ env.TARGET_DIR }}
+          drush cr
