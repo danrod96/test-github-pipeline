@@ -24,5 +24,6 @@ jobs:
           TARGET: ${{ secrets.TARGET_DIR }}
       
       - name: Build Drupal App
-      - run: "cd ${{ secrets.TARGET_DIR }}"
+        run: |
+          cd ${{ secrets.TARGET_DIR }}
       - run: "drush cr"
