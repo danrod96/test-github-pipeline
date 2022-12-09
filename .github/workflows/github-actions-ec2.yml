@@ -32,4 +32,9 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ${{ secrets.TARGET_DIR }}
-            ls -l
+            composer install
+            /home/ubuntu/.config/composer/vendor/bin/drush cr
+            /home/ubuntu/.config/composer/vendor/bin/drush -y updatedb
+            /home/ubuntu/.config/composer/vendor/bin/drush -y cim
+            /home/ubuntu/.config/composer/vendor/bin/drush cr
+            echo "** Finished D9 Building **"
