@@ -81,3 +81,5 @@ web/robots.txt
 web/update.php
 web/web.config
 web/example.gitignore
+web/.ht.router.php
+web/README.md
