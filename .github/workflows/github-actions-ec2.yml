@@ -31,5 +31,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            whoami
-            ls -al
+            cd ${{ secrets.TARGET_DIR }}
+            drush cr
