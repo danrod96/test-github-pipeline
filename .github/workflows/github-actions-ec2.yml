@@ -25,5 +25,4 @@ jobs:
       
       - name: Build Drupal App
         run: |
-          cd ${{ secrets.TARGET_DIR }}
-      - run: "drush cr"
+          cd ${{ env.TARGET_DIR }}
